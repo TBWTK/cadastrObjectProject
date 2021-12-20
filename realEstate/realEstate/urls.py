@@ -33,3 +33,4 @@ urlpatterns = [
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
+# мб в нем трабл, там так же в консоли он настраиватеся, через те команды
