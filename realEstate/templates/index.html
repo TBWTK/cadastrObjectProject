@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/displayStatus/">Статусы</a>
+    <a href="/displayEstate/">Недвижимость</a>
+    <a href="/displayPerson/">Владельцы</a>
+    <a href="/createLandPlot/">Создать информацию о земельном участке</a></li>
+    {% if landPlot.count > 0 %}
+    <table>
+        {% for el in landPlot %}
+        <tr>
+            <td>
+                <p>
+                    <label>Название участка:</label>
+                    {{ el.name }}
+                </p>
+                <p>
+                    <label>Владелец:</label>
+                    {{ el.person }}
+                </p>
+                <p>
+                    <a href="{{ el.description.url }}" type="txt">Описание участка</a>
+                </p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>

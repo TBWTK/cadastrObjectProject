@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Недвижимость</title>
+</head>
+<body class="container">
+    <a href='/'> Вернуться </a>
+    {% if estate.count > 0 %}
+    <h2>Список недвижимости</h2>
+    <table>
+        <tr>
+          <th>Номер</th>
+          <th>Название</th>
+          <th>Статус</th>
+        </tr>
+        {% for el in estate %}
+        <tr>
+          <td>{{ el.id }}</td>
+          <td>{{ el.name }}</td>
+          <td>{{ el.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <a href='createEstate/'> Для добавления недмижимости щелкни здесь! </a>
+</body>
+</html>

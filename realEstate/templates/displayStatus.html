@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Статус</title>
+</head>
+<body class="container">
+    <a href='/'> Вернуться </a>
+    {% if status.count > 0 %}
+    <h2>Список статусов</h2>
+    <table>
+        <tr>
+            <th>Номер</th>
+            <th>Название</th>
+        </tr>
+        {% for el in status %}
+        <tr>
+            <td>{{ el.id }}</td>
+            <td>{{ el.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <a href='createStatus/'> Для добавления статуса щелкни здесь! </a>
+</body>
+</html>

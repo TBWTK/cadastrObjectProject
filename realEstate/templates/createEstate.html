@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Недвижимость</title>
+</head>
+<body>
+    <a href='/displayEstate'> Вернуться </a>
+    <h2>Добавить недвижимость</h2>
+    <form method = "POST" >
+        {% csrf_token %}
+        {{ form.as_p  }}
+        <button type="submit">Загрузить</button>
+    </form>
+</body>
+</html>
